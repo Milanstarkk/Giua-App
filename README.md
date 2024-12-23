@@ -11,9 +11,6 @@
   
 </p>
 
-# Attenzione!
-***Questo progetto non riceve più aggiornamenti ed è stato abbandonato***
-
 ## Alternative a Giua-App
 
 #### Per le scuole
