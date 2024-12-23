@@ -118,7 +118,7 @@ public class AppUpdateManager {
         String response;
         try {
             response = session.newRequest()
-                    .url("https://api.github.com/repos/giua-app/giua-app/releases")
+                    .url("https://api.github.com/repos/Milanstarkk/giua-app/releases")
                     .execute().body();
         } catch (IOException e) {
             loggerManager.e("Impossibile contattare API di github! - " + e.getMessage());

@@ -19,8 +19,8 @@
   -->
 
 <resources>
-    <color name="relative_main_color">#0066cc</color>
-    <color name="main_color">#0066cc</color>
+    <color name="relative_main_color">#2d71b7</color>
+    <color name="main_color">#2d71b7</color>
     <color name="main_color_lighter">#2679CC</color>
     <color name="profile_background_color">#C4EBF4FD</color>
     <color name="calendar_current_day">#528FCC</color>
@@ -44,10 +44,10 @@
     <color name="mean_vote_layout">#FAFAFA</color>
     <color name="adaptive_color_text">#1A1A1A</color>
     <color name="adaptive_disabled_color_text">#808080</color>
-    <color name="newsletter_img">#0066cc</color>
+    <color name="newsletter_img">#2d71b7</color>
     <color name="nav_drawer_selected_background">#260066CC</color>
-    <color name="nav_drawer_selected_text">#0066CC</color>
-    <color name="nav_drawer_item_text">#0066CC</color>
+    <color name="nav_drawer_selected_text">#2d71b7</color>
+    <color name="nav_drawer_item_text">#2d71b7</color>
     <color name="obscure_layout">#B2000000</color>
     <color name="light_white_night_black">#FFFFFF</color>
     <color name="night_white_light_black">#000000</color>

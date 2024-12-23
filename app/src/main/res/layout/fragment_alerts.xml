@@ -109,62 +109,62 @@
     </com.giua.app.ui.views.ObscureLayoutView>
 
     <LinearLayout
-        android:id="@+id/alert_details_layout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/corner_radius_10dp"
-        android:backgroundTint="@color/general_view_color"
-        android:orientation="vertical"
-        android:padding="10dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421"
-        android:clickable="true"
-        android:focusable="true">
+            android:id="@+id/alert_details_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/corner_radius_10dp"
+            android:backgroundTint="@color/general_view_color"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.421"
+            android:clickable="true"
+            android:focusable="true">
 
         <TextView
-            android:id="@+id/alert_type_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/varelaroundregular"
-            android:text="Tipo"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+                android:id="@+id/alert_type_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varelaroundregular"
+                android:text="Tipo"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/alert_details_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/varelaroundregular"
-            android:maxHeight="200dp"
-            android:text="Dettagli"
-            android:textIsSelectable="true"
-            android:scrollbars="vertical"
-            android:scrollbarAlwaysDrawVerticalTrack="true"
-            android:textSize="16sp" />
+                android:id="@+id/alert_details_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/varelaroundregular"
+                android:maxHeight="200dp"
+                android:text="Dettagli"
+                android:textIsSelectable="true"
+                android:scrollbars="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:textSize="16sp"/>
 
         <TextView
-            android:id="@+id/alert_creator_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/varelaroundregular"
-            android:text="Creatore"
-            android:textAlignment="textEnd" />
+                android:id="@+id/alert_creator_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/varelaroundregular"
+                android:text="Creatore"
+                android:textAlignment="textEnd"/>
 
         <LinearLayout
-            android:id="@+id/alert_attachment_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" />
+                android:id="@+id/alert_attachment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
 
     </LinearLayout>
 

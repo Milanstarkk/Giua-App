@@ -153,8 +153,31 @@ public class AboutActivity extends MaterialAboutActivity {
                 })
                 .build());
 
+
+        MaterialAboutCard.Builder authorCardBuilderFork = new MaterialAboutCard.Builder();
+        authorCardBuilderFork.title("Sviluppatore Fork");
+//        authorCardBuilderFork.titleColor(ContextCompat.getColor(c, R.color.colorAccent));
+
+        authorCardBuilderFork.addItem(new MaterialAboutActionItem.Builder()
+                .text("Milanstarkk")
+                //.subText("United Kingdom")
+                .icon(new IconicsDrawable(this)
+                        .icon(CommunityMaterial.Icon.cmd_account)
+                        .sizeDp(18))
+                .build());
+
+        authorCardBuilderFork.addItem(new MaterialAboutActionItem.Builder()
+                .text("Source code fork su GitHub")
+                .icon(new IconicsDrawable(this)
+                        .icon(CommunityMaterial.Icon.cmd_github_circle)
+                        .sizeDp(18))
+                .setOnClickAction(ConvenienceBuilder.createWebViewDialogOnClickAction(this,"", "Chiudi",
+                        "https://github.com/Milanstarkk/Giua-App", true, false))
+                .build());
+
+
         MaterialAboutCard.Builder authorCardBuilder = new MaterialAboutCard.Builder();
-        authorCardBuilder.title("Sviluppatori");
+        authorCardBuilder.title("Sviluppatori app originale");
 //        authorCardBuilder.titleColor(ContextCompat.getColor(c, R.color.colorAccent));
 
         authorCardBuilder.addItem(new MaterialAboutActionItem.Builder()
@@ -180,7 +203,7 @@ public class AboutActivity extends MaterialAboutActivity {
                 .build());
 
         authorCardBuilder.addItem(new MaterialAboutActionItem.Builder()
-                .text("Source code su GitHub")
+                .text("Source code app originale su GitHub")
                 .icon(new IconicsDrawable(this)
                         .icon(CommunityMaterial.Icon.cmd_github_circle)
                         .sizeDp(18))
@@ -189,7 +212,7 @@ public class AboutActivity extends MaterialAboutActivity {
                 .build());
 
         authorCardBuilder.addItem(new MaterialAboutActionItem.Builder()
-                .text("Sito web ufficiale")
+                .text("Sito web app ufficiale")
                 .icon(new IconicsDrawable(this)
                         .icon(CommunityMaterial.Icon2.cmd_web)
                         .sizeDp(18))
@@ -211,7 +234,7 @@ public class AboutActivity extends MaterialAboutActivity {
                 .build());
 
         loggerManager.d("Creazione pagina about completata");
-        return new MaterialAboutList(appCardBuilder.build(), authorCardBuilder.build(), otherCardBuilder.build());
+        return new MaterialAboutList(appCardBuilder.build(), authorCardBuilderFork.build(), authorCardBuilder.build(), otherCardBuilder.build());
     }
 
     public static MaterialAboutList createMaterialAboutLicenseList(final Context c) {
@@ -314,145 +337,5 @@ public class AboutActivity extends MaterialAboutActivity {
 
 
     private void soLongAndThanksForAllTheFish(boolean fromButton){
-        if(SettingsData.getSettingBoolean(this, SettingKey.FIRST_PARTY)) {
-            SettingsData.saveSettingBoolean(this, SettingKey.PARTY_MODE, true);
-            Toast.makeText(this, "Dì addio ai tuoi occhi", Toast.LENGTH_SHORT).show();
-            this.finish();
-            Intent intent = new Intent(this, ActivityManager.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            return;
-        }
-        if(!isDialogActive && fromButton){
-            importantInteger++;
-        } else if (isDialogActive && !fromButton)
-            importantInteger++;
-
-        if(importantInteger == -16) {
-            Snackbar.make(findViewById(android.R.id.content), "Ehi...", Snackbar.LENGTH_SHORT).show();
-            Analytics.sendDefaultRequest(Analytics.HERE_TAKE_SOME_CAKE);
-            loggerManager.d("So Long, and Thanks for All the Fish");
-        }
-        switch (importantInteger) {
-            case 1:
-                isDialogActive = true;
-                new AlertDialog.Builder(this)
-                        .setTitle(":/")
-                        .setMessage("Quindi sei tornato...")
-                        .setPositiveButton("Si", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 2:
-                new AlertDialog.Builder(this)
-                        .setTitle("-_-")
-                        .setMessage("...")
-                        .setPositiveButton("(avanti)", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 3:
-                new AlertDialog.Builder(this)
-                        .setTitle("-_-")
-                        .setMessage("Purtroppo quest'app non verrà più aggiornata spesso...")
-                        .setPositiveButton("Si...", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 4:
-                new AlertDialog.Builder(this)
-                        .setTitle(";_;")
-                        .setMessage("...")
-                        .setPositiveButton("(avanti)", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 5:
-                new AlertDialog.Builder(this)
-                        .setTitle(";-;")
-                        .setMessage("Non sono molto bravo con gli addii...")
-                        .setPositiveButton("(avanti)", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 6:
-                new AlertDialog.Builder(this)
-                        .setTitle(";_;")
-                        .setMessage("...quindi ho pensato di fare qualcosa di diverso...")
-                        .setPositiveButton("(avanti)", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 7:
-                new AlertDialog.Builder(this)
-                        .setTitle(";_;")
-                        .setMessage("...qualcosa di più di un semplice addio...")
-                        .setPositiveButton("(avanti)", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 8:
-                new AlertDialog.Builder(this)
-                        .setTitle("'_'")
-                        .setMessage("se più avanti vuoi rivederlo, puoi sempre ritornare da me... sai dove trovarmi")
-                        .setPositiveButton("(avanti)", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 9:
-                new AlertDialog.Builder(this)
-                        .setTitle("'_'")
-                        .setMessage("Sei pronto a scoprire cosa sia?")
-                        .setPositiveButton("Ok, sono pronto", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-
-                break;
-            case 10:
-                new AlertDialog.Builder(this)
-                        .setTitle("._.")
-                        .setMessage("3")
-                        .setPositiveButton("(avanti)", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 11:
-                new AlertDialog.Builder(this)
-                        .setTitle("*-*")
-                        .setMessage("2")
-                        .setPositiveButton("(avanti)", (dialog, id) -> soLongAndThanksForAllTheFish(false))
-
-                        .setCancelable(false)
-                        .show();
-                break;
-            case 12:
-                new AlertDialog.Builder(this)
-                        .setTitle("^-^ <(bye)")
-                        .setMessage("1")
-                        .setPositiveButton("Addio, e grazie per tutto il pesce", (dialog, id) -> {
-                            SettingsData.saveSettingBoolean(this, SettingKey.PARTY_MODE, true);
-                            SettingsData.saveSettingBoolean(this, SettingKey.FIRST_PARTY, true);
-                            Toast.makeText(this, "Dì addio ai tuoi occhi", Toast.LENGTH_SHORT).show();
-                            this.finish();
-                            Intent intent = new Intent(this, ActivityManager.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                        })
-
-                        .setCancelable(false)
-                        .show();
-                break;
-        }
-
     }
 }

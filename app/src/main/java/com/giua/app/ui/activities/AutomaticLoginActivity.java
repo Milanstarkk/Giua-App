@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -54,6 +55,7 @@ public class AutomaticLoginActivity extends AppCompatActivity {
     ProgressBar pbLoadingScreen;
     TextView tvAutoLogin;
     LoggerManager loggerManager;
+    ImageView logoLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,7 @@ public class AutomaticLoginActivity extends AppCompatActivity {
         btnLogout = findViewById(R.id.loading_screen_logout_btn);
 
         tvAutoLogin = findViewById(R.id.loading_screen_minor_text_view);
+        logoLogin = findViewById(R.id.logoLogin);
         pbLoadingScreen = findViewById(R.id.loading_screen_progressbar);
         btnOffline = findViewById(R.id.loading_screen_offline_btn);
 

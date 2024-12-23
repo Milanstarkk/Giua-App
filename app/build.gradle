@@ -56,7 +56,7 @@ android {
         minSdkVersion 24
         targetSdkVersion 31
         versionCode androidGitVersion.code()
-        versionName "0.7.1-stable" //Da usare per le release
+        versionName "0.8.0" //Da usare per le release
         //versionName androidGitVersion.name() //Da usare per lo sviluppo
 
         def localProperties = new Properties()
@@ -159,7 +159,9 @@ dependencies {
     implementation 'com.github.Dhaval2404:ColorPicker:2.3'
 
     //--Giua scraper
-    implementation 'com.github.Giua-app:Giua-Webscraper:ffbd72cc3d'
+    implementation 'com.github.Milanstarkk:Giua-Webscraper:94b1b74130'
+    //                                                     94b1b74130de56ec6a3294d476738aeecf064708
+    //                                                     ffbd72cc3d
     //implementation fileTree(dir: 'libs', include: ['*.jar'])     //DEBUG
     //implementation 'com.fasterxml.jackson.core:jackson-core:2.12.5'   //DEBUG
     //implementation 'com.fasterxml.jackson.core:jackson-annotations:2.12.5'    //DEBUG
