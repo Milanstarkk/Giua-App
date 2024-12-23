@@ -59,7 +59,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtSubtitle" app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintTop_toBottomOf="@+id/txtSubtitle">
 
         <TextView
                 android:id="@+id/login_card_title"
