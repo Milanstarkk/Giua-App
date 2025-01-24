@@ -87,6 +87,12 @@
     <string name="votecomponent_textview_secondperiod">2° Quadrimestre</string>
     <string name="votecomponent_textview_mean">Medie:</string>
 
+    <!-- Disciplinary notice component -->
+    <string name="notecomponent_textview_date">Data:</string>
+    <string name="notecomponent_textview_type">Tipo:</string>
+    <string name="notecomponent_textview_note">Nota:</string>
+    <string name="notecomponent_textview_measure">Provvedimento:</string>
+
     <!-- Activity main drawer -->
     <string name="activitymaindrawer_nav_voti">Voti</string>
     <string name="activitymaindrawer_nav_agenda">Agenda</string>

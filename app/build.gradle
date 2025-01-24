@@ -56,7 +56,7 @@ android {
         minSdkVersion 24
         targetSdkVersion 31
         versionCode androidGitVersion.code()
-        versionName "0.8.0" //Da usare per le release
+        versionName "0.8.1" //Da usare per le release
         //versionName androidGitVersion.name() //Da usare per lo sviluppo
 
         def localProperties = new Properties()

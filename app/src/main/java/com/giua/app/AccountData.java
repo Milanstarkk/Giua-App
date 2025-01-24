@@ -115,12 +115,18 @@ public class AccountData {
     }
 
     public static int getTheme(final Context context, final String username) {
-        return getSharedPreferences(context, username).getInt(themeKey, Color.rgb(0, 123, 255));
+        try {
+            return getSharedPreferences(context, username).getInt(themeKey, Color.rgb(0, 123, 255));
+        } catch (ClassCastException e) {
+            getSharedPreferences(context, username).edit().remove(themeKey).apply();
+            return Color.rgb(0, 123, 255);
+        }
+
     }
 
     public static void setEmail(final Context context, final String username, final String email) {
         getSharedPreferences(context, username).edit()
-                .putString(themeKey, email)
+                .putString(emailKey, email)
                 .apply();
     }
 

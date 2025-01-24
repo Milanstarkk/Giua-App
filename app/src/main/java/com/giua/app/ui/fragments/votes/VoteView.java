@@ -30,7 +30,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RestrictTo;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
 
@@ -38,7 +37,6 @@ import com.giua.app.AppUtils;
 import com.giua.app.R;
 import com.giua.objects.Vote;
 import com.giua.pages.VotesPage;
-import com.giua.utils.GiuaScraperUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -86,8 +84,8 @@ public class VoteView extends ConstraintLayout {
             HorizontalScrollView horizontalScrollView = createHorizontalScrollView(context);
             TextView meanTextView = createTextViewForMeans(context, VotesPage.getMeanOf(allVotes, quarterly), isFirst);
 
-            ((LinearLayout) findViewById(R.id.list_vote_layout)).addView(quarterlyTextView);
-            ((LinearLayout) findViewById(R.id.list_vote_layout)).addView(horizontalScrollView);
+            ((LinearLayout) findViewById(R.id.note_layout)).addView(quarterlyTextView);
+            ((LinearLayout) findViewById(R.id.note_layout)).addView(horizontalScrollView);
             ((LinearLayout) findViewById(R.id.mean_vote_layout)).addView(meanTextView);
 
             isFirst = false;
